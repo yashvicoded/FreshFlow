@@ -45,24 +45,7 @@ const Analytics: React.FC = () => {
                 </div>
             </div>
 
-            {/* Main Financial Chart */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-800 mb-6">Financial Recovery vs Potential</h3>
-                <div className="h-96">
-                    <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={savingsData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                            <XAxis dataKey="month" axisLine={false} tickLine={false} />
-                            <YAxis axisLine={false} tickLine={false} />
-                            <Tooltip 
-                                cursor={{fill: '#f3f4f6'}}
-                                contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-                            />
-                            <Legend />
-                            <Bar dataKey="saved" fill="#10B981" name="Actual Savings ($)" radius={[4, 4, 0, 0]} />
-                            <Bar dataKey="potential" fill="#E5E7EB" name="Total Potential ($)" radius={[4, 4, 0, 0]} />
-                        </BarChart>
-                    </ResponsiveContainer>
-                </div>
+           
             </div>
 
             {/* Waste Breakdown Table */}
@@ -80,18 +63,7 @@ const Analytics: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
-                        <tr>
-                            <td className="px-6 py-4 text-sm font-medium text-gray-900">Bananas</td>
-                            <td className="px-6 py-4 text-sm text-gray-500">Produce</td>
-                            <td className="px-6 py-4 text-sm text-gray-500">15 kg</td>
-                            <td className="px-6 py-4 text-sm text-red-600 font-medium">$45.00</td>
-                        </tr>
-                        <tr>
-                            <td className="px-6 py-4 text-sm font-medium text-gray-900">Yogurt Cups</td>
-                            <td className="px-6 py-4 text-sm text-gray-500">Dairy</td>
-                            <td className="px-6 py-4 text-sm text-gray-500">24 units</td>
-                            <td className="px-6 py-4 text-sm text-red-600 font-medium">$32.50</td>
-                        </tr>
+                    
                     </tbody>
                 </table>
             </div>
